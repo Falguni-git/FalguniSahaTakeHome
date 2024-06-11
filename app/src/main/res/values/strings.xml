@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FalguniSahaTakehome</string>
+    <string name="app_title">Take Home</string>
+    <string name="search">SEARCH</string>
+    <string name="enter_a_github_user_id">Enter a github user id</string>
+    <string name="details">Details</string>
+    <string name="repo_total_forks">Total Forks: </string>
+    <string name="repo_name">Name: </string>
+    <string name="repo_description">Description: </string>
+    <string name="repo_updated_at">Repo Updated at: </string>
+    <string name="repo_stargazers_count">Stargazers Count: </string>
+    <string name="repo_forks">Forks: </string>
+    <string name="loading">Loading</string>
+    <string name="Error">Error</string>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/search_button_height"
+        android:layout_marginLeft="@dimen/padding_margin"
+        android:layout_marginTop="@dimen/search_button_margin_top"
+        android:layout_marginRight="@dimen/padding_margin"
+        android:backgroundTint="@color/search_button_bg_color"
+        android:gravity="center"
+        android:text="@string/search"
+        app:cornerRadius="@dimen/no_dp"
+        android:textSize="@dimen/search_button_text_size"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchTextLayout"
+        android:layout_width="@dimen/text_inputlayout_width"
+        android:layout_height="@dimen/text_inputlayout_height"
+        android:hint="@string/enter_a_github_user_id"
+        android:layout_marginStart="@dimen/padding_margin"
+        android:layout_marginTop="@dimen/no_dp"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/search_text_hint_active_color"
+        app:hintTextColor="@color/search_text_hint_active_color"
+        app:layout_constraintRight_toLeftOf="@+id/searchButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/searchButton">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/search_text_size"
+            android:padding="@dimen/text_input_edittext" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+        android:id="@+id/avatarImg"
+        android:layout_width="@dimen/image_view_height_width"
+        android:layout_height="@dimen/image_view_height_width"
+        android:layout_marginTop="@dimen/view_common_top_bottom_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchTextLayout" />
+
+    <TextView
+        android:id="@+id/userNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_margin"
+        android:layout_marginTop="@dimen/view_common_top_bottom_margin"
+        android:gravity="center"
+        android:textSize="@dimen/search_button_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatarImg" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/repoRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recyclerview_height"
+        android:layout_marginBottom="@dimen/view_common_top_bottom_margin"
+        app:layout_constraintTop_toBottomOf="@+id/userNameText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="avatarImg" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

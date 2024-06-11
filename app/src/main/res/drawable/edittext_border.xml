@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:thickness="1dp"
+    android:shape="line"
+    android:tint="@color/search_text_hint_active_color">
+    <corners android:radius="0dp" />
+</shape>
