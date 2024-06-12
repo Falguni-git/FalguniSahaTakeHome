@@ -10,12 +10,12 @@ class UserRepositoryTest {
     private val userRepository = Mockito.mock<UserRepository>()
 
     @Test
-    fun  fetchUserInformationTest() = runBlocking {
+    fun getUserInformationTest() = runBlocking {
         doNothing().`when`(userRepository).fetchUserInformation(Mockito.anyString())
         Mockito.verify(userRepository, Mockito.times(0)).fetchUserInformation(Mockito.anyString())
     }
     @Test
-    fun  fetchRepoTest() = runBlocking {
+    fun getUserRepoTest() = runBlocking {
         doNothing().`when`(userRepository).fetchUserRepo(Mockito.anyString())
         Mockito.verify(userRepository, Mockito.times(0)).fetchUserRepo(Mockito.anyString())
     }

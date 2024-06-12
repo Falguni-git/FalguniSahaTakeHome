@@ -46,8 +46,6 @@ class ListAdapter (private val list: List<UserRepoResponse>, listener: ClickList
         return list.size
     }
 
-    fun totalNumberOfForks(): Int = totalForks
-
     // Holds the views for adding it to image and text
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tile: TextView = itemView.findViewById(R.id.name)

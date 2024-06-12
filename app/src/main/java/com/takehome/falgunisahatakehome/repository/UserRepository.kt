@@ -50,6 +50,7 @@ class UserRepository {
                     val responseBody = response.body()
                     if (!response.isSuccessful || responseBody == null) {
                         onError("Data Processing Error")
+                        _isLoading.value = false
                         return
                     }
                     _isLoading.value = false
@@ -86,6 +87,7 @@ class UserRepository {
 
                     if (!response.isSuccessful || responseBody == null) {
                         onError("Data Processing Error")
+                        _isLoading.value = false
                         return
                     }
                     _isLoading.value = false

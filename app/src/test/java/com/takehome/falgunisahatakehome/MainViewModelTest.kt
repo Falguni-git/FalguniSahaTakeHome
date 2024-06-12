@@ -26,7 +26,7 @@ class MainViewModelTest {
     }
 
     @Test
-    fun  fetchRepoTest() = runBlocking {
+    fun fetchRepoTest() = runBlocking {
         doNothing().`when`(userRepository).fetchUserRepo(anyString())
         viewModel.getRepoList(anyString())
         verify(userRepository,times(0)).fetchUserRepo(anyString())
